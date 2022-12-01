@@ -1,0 +1,62 @@
+<html>
+    <body>
+        <!-- <p>
+            Moi ban nhap so
+        </p>
+        <input type="number" id="nhap">
+        <button onclick="myFunction()" style="background-color: rgb(212, 90, 90);">Try it</button>
+        <span id="demo"></span>
+        <script>
+            function myFunction(){
+                var number=document.getElementById("nhap").value;
+                var greeting;
+                if(number==0){
+                    document.getElementById("demo").innerHTML="Ban duoc 0 diem";
+                    document.getElementById("demo").style.color="yellow";
+                }
+                else if(number>0){
+                    document.getElementById("demo").innerHTML="Day la so duong";
+                    document.getElementById("demo").style.color="blue";
+                }
+                else{
+                    document.getElementById("demo").innerHTML="Day la so am";
+                    document.getElementById("demo").style.color="black"
+                }
+            
+            }
+        </script> -->
+        <form action="post">
+            <label>Input student name</label>
+            <input type="text" name="text_name">
+            <br>
+            <br>
+            <label>Input student score</label>
+            <input type="number" name="text_score">
+            <input type="button" name="btn_grade" onclick="grade(text_scrore.value,text_name.value)" value="Define grade"/>
+        </form>
+        <div id="str_grade"></div>
+        <script>
+            function grade(name,score){
+                var st_grade;
+                if(score >=0 && score <=100){
+                    if(score>90){
+                        st_grade="Exelence";
+                    }
+                    else if(score>80){
+                        st_grade="Very good";
+                    }
+                    else if(score>60){
+                        st_grade="Fair";
+                    }
+                    else{
+                        st_grade="Medium";
+                    }
+                }
+                else{
+                    st_grade="Score must be between 0 to 100";
+                }
+                document.getElementById('st_grade').innerHTML=name + "'s grade is <b>" + st_grade + '</b>';
+            }
+        </script>
+    </body>
+</html>
