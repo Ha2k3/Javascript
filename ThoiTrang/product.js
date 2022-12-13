@@ -28,6 +28,7 @@ var man=[
         image:" https://cf.shopee.vn/file/f8f71a038f9baa48ddee565d16bf76a9"
     }
 ]
+
 var woment=[
     {
         id:1,
@@ -58,33 +59,3 @@ var woment=[
         image:"https://lzd-img-global.slatic.net/g/p/0f22348be7f686e3f2fa674ca925d21d.jpg_720x720q80.jpg_.webp"
     }
 ]
-function listproducts(){
-    for(var i=0;i<=man.length-1;i++){
-        var demo='<div class="col-3">';
-        demo += '<div class="card" style="width:20rem;">';
-        demo += '<img src="' + man[i].image+'" class="card-img-top" style="height:400px;">';
-        demo += '<div class="card-body">';
-        demo += '<p class="card-text">'+man[i].name +'</p>'
-        demo += '<p class="card-text">'+man[i].price+'</p>';
-        demo += '<a href="#" class="btn btn-primary" onclick="order()">Đặt mua</a>'
-        demo += '</div>';
-        demo += '</div>';
-        demo += '</div>';
-        console.log(demo);
-        document.getElementById("men").innerHTML+=demo;
-    }
-    for(var i=0;i<=woment.length-1;i++){
-        var demo='<div class="col-3">';
-        demo += '<div class="card" style="width:20rem;">';
-        demo += '<img src="' + woment[i].image+'" class="card-img-top" style="height:400px;">';
-        demo += '<div class="card-body">';
-        demo += '<p class="card-text">'+woment[i].name +'</p>'
-        demo += '<p class="card-text">'+woment[i].price+'</p>' ;
-        demo += '<a href="#" class="btn btn-primary" onclick="order()">Đặt mua</a>'
-        demo += '</div>';
-        demo += '</div>';
-        demo += '</div>';
-        console.log(demo);
-        document.getElementById("woman").innerHTML+=demo;
-    }
-}
