@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>New Product</h1>
+    <h2>New Product</h2>
     <form name="frm">
         <p>
             <label>
                 Product Name
-                <input type="text" name="pname" id="pname">
+                <input type="text" name="pn" id="pn">
             </label>
             <label>
                 Quantity
@@ -34,7 +34,7 @@
             <button type="button">Cancle</button>
         </p>
     </form>
-    <table id="tb1">
+    <table id="tbp">
         <tr>
             <th>ID</th>
             <th>Product Name</th>
@@ -44,42 +44,23 @@
             <th>Subtotal</th>
         </tr>
     </table>
-    <script>
-        var id=0;
-        function sell(){
-            id ++;
-            var pname=frm.pname.value;
-            var qty=frm.qty.value;
-            var price=frm.up.value;
-            var dc=frm.dc.value;
-            var sub=qty*price*(1-dc/100);
-            var row="<tr>";
-            row+="<td>"+ id + "</td>";
-            row+="<td>"+ pname + "</td>";
-            row+="<td>"+ qty + "</td>";
-            row+="<td>"+ price + "</td>";
-            row+="<td>"+ dc + "</td>";
-            row+="<td>"+ sub + "</td>";
-            row+="</tr>";
-            document.getElementById("tb1").innerHTML+=row;
-        }
-    </script>
     <style>
         table{
             width: 600px;
             border-spacing: 0;
-            border: 1px solid #bbb;
+            border: 1px solid rgb(225, 217, 217);
         }
-        #tb1 tr{
+        #tbp tr{
             height: 27px;
         }
-        #tb1 tr th,#tb1 tr td{
+        #tbp tr th,#tbp tr td{
             text-align: left;
             border-bottom: 1px solid #ccc;
         }
-        #tb1 tr:last-child td{
+        #tbp tr:last-child td{
             border: none;
         }
     </style>
+    <script src="btprduct.js"></script>
 </body>
 </html>
